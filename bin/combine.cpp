@@ -188,7 +188,7 @@ int main(int argc, char **argv) {
   }
   RooRandom::randomGenerator()->SetSeed(seed); 
 
-  TString massName = TString::Format("mH%g.", iMass);
+  TString massName = TString::Format("mH%d.", int(iMass));
   TString toyName  = "";  if (runToys > 0 || seed != 123456 || vm.count("saveToys")) toyName  = TString::Format("%d.", seed);
   if (vm.count("expectedFromGrid") && !vm["expectedFromGrid"].defaulted()) toyName += TString::Format("quant%.3f.", vm["expectedFromGrid"].as<float>());
   if (vm.count("expected")         && !vm["expected"].defaulted())         toyName += TString::Format("quant%.3f.", vm["expected"].as<float>());

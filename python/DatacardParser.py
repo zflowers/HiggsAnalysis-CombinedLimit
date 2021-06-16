@@ -192,7 +192,7 @@ def parseCard(file, options):
                 if options.verbose > 0: stderr.write("Excluding nuisance %s selected by a veto pattern among %s\n" % (lsyst, options.nuisancesToExclude))
                 if nuisances != -1: nuisances -= 1
                 continue
-            if re.match("[0-9]+",lsyst): lsyst = "theta"+lsyst
+            #if re.match("[0-9]+",lsyst): lsyst = "theta"+lsyst
             if pdf == "lnN" or pdf == "lnU" or pdf == "gmM" or pdf == "trG" or pdf.startswith("shape"):
                 pass # nothing special to do
             elif pdf == "gmN":
