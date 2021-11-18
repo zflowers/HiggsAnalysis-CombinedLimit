@@ -8,7 +8,7 @@
     
     
     
-    <link rel="shortcut icon" href="../img/favicon.ico">
+    <link rel="shortcut icon" href="../../img/favicon.ico">
 
     
     <title>Preparing the datacard - Combine</title>
@@ -19,16 +19,16 @@
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.min.css">
     <link href='//rsms.me/inter/inter.css' rel='stylesheet' type='text/css'>
     <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
-    <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
-    <link href="../css/base.min.css" rel="stylesheet">
-    <link href="../css/cinder.min.css" rel="stylesheet">
+    <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+    <link href="../../css/base.min.css" rel="stylesheet">
+    <link href="../../css/cinder.min.css" rel="stylesheet">
 
     
         
         <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/styles/github.min.css">
         
     
-    <link href="../mystyle.css" rel="stylesheet">
+    <link href="../../mystyle.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -60,7 +60,7 @@
             <!-- Main title -->
 
             
-              <a class="navbar-brand" href="../index.html">Combine</a>
+              <a class="navbar-brand" href="../..">Combine</a>
             
         </div>
 
@@ -71,7 +71,7 @@
                 
                 
                     <li >
-                        <a href="../index.html">Home</a>
+                        <a href="../..">Home</a>
                     </li>
                 
                 
@@ -82,19 +82,19 @@
                         
                             
 <li class="active">
-    <a href="settinguptheanalysis.html">Preparing the datacard</a>
+    <a href="./">Preparing the datacard</a>
 </li>
 
                         
                             
 <li >
-    <a href="physicsmodels.html">Physics models</a>
+    <a href="../physicsmodels/">Physics models</a>
 </li>
 
                         
                             
 <li >
-    <a href="bin-wise-stats.html">Automatic MC statistical uncertainties</a>
+    <a href="../bin-wise-stats/">Automatic MC statistical uncertainties</a>
 </li>
 
                         
@@ -109,37 +109,37 @@
                         
                             
 <li >
-    <a href="../part3/runningthetool.html">Running the tool</a>
+    <a href="../../part3/runningthetool/">Running the tool</a>
 </li>
 
                         
                             
 <li >
-    <a href="../part3/commonstatsmethods.html">Common statistical methods</a>
+    <a href="../../part3/commonstatsmethods/">Common statistical methods</a>
 </li>
 
                         
                             
 <li >
-    <a href="../part3/nonstandard.html">Advanced use cases</a>
+    <a href="../../part3/nonstandard/">Advanced use cases</a>
 </li>
 
                         
                             
 <li >
-    <a href="../part3/regularisation.html">Unfolding & regularization</a>
+    <a href="../../part3/regularisation/">Unfolding & regularization</a>
 </li>
 
                         
                             
 <li >
-    <a href="../part3/validation.html">Validating datacards</a>
+    <a href="../../part3/validation/">Validating datacards</a>
 </li>
 
                         
                             
 <li >
-    <a href="../part3/debugging.html">Debugging fit failures</a>
+    <a href="../../part3/debugging/">Debugging fit failures</a>
 </li>
 
                         
@@ -149,7 +149,7 @@
                 
                 
                     <li >
-                        <a href="../part4/usefullinks.html">Links & FAQ</a>
+                        <a href="../../part4/usefullinks/">Links & FAQ</a>
                     </li>
                 
                 
@@ -160,19 +160,19 @@
                         
                             
 <li >
-    <a href="../part5/roofit.html">RooFit Basics</a>
+    <a href="../../part5/roofit/">RooFit Basics</a>
 </li>
 
                         
                             
 <li >
-    <a href="../part5/longexercise.html">Exercise: main features</a>
+    <a href="../../part5/longexercise/">Exercise: main features</a>
 </li>
 
                         
                             
 <li >
-    <a href="../part5/longexerciseanswers.html">Solutions to long exercise</a>
+    <a href="../../part5/longexerciseanswers/">Solutions to long exercise</a>
 </li>
 
                         
@@ -189,12 +189,12 @@
                         </a>
                     </li>
                     <li >
-                        <a rel="prev" href="../index.html">
+                        <a rel="prev" href="../..">
                             <i class="fas fa-arrow-left"></i> Previous
                         </a>
                     </li>
                     <li >
-                        <a rel="next" href="physicsmodels.html">
+                        <a rel="next" href="../physicsmodels/">
                             Next <i class="fas fa-arrow-right"></i>
                         </a>
                     </li>
@@ -276,7 +276,7 @@ bg_others lnN    -     -     -   1.30   30% uncertainty on the rest of the backg
 <li>the first columns is a label identifying the uncertainty</li>
 <li>the second column identifies the type of distribution used<ul>
 <li><strong><code>lnN</code></strong> stands for <a href="http://en.wikipedia.org/wiki/Log-normal_distribution">Log-normal</a>, which is the recommended choice for multiplicative corrections (efficiencies, cross sections, ...).
-    If <strong>Δx/x</strong> is the relative uncertainty on the multiplicative correction, one should put <strong>1+Δx/x</strong> in the column corresponding to the process and channel. Asymmetric log-normals are instead supported by providing <strong>κ<sub>down</sub>/κ<sub>up</sub></strong> where <strong>κ<sub>down</sub></strong> is the ratio of the the yield to the nominal value for a -1σ deviation of the nuisance and <strong>κ<sub>up</sub></strong> is the ratio of thyield to the nominal value for <span><span class="MathJax_Preview">+1\sigma</span><script type="math/tex">+1\sigma</script></span> deviation. Note that for single-value log-normal with value <span><span class="MathJax_Preview">\kappa=1+\Delta x/x</span><script type="math/tex">\kappa=1+\Delta x/x</script></span>, the yield of the process it is associated with is multiplied by <span><span class="MathJax_Preview">\kappa^{\theta}</span><script type="math/tex">\kappa^{\theta}</script></span>. At <span><span class="MathJax_Preview">\theta=0</span><script type="math/tex">\theta=0</script></span> the nominal yield is retained, at <span><span class="MathJax_Preview">\theta=1\sigma</span><script type="math/tex">\theta=1\sigma</script></span> the yield is multiplied by <span><span class="MathJax_Preview">\kappa</span><script type="math/tex">\kappa</script></span> and at <span><span class="MathJax_Preview">\theta=-1\sigma</span><script type="math/tex">\theta=-1\sigma</script></span> the yield is multiplied by <span><span class="MathJax_Preview">1/\kappa</span><script type="math/tex">1/\kappa</script></span>. This means that an uncertainty represented as <code>1.2</code> does not multiply the nominal yield by 0.8 for <span><span class="MathJax_Preview">\theta=-1\sigma</span><script type="math/tex">\theta=-1\sigma</script></span>; but by 0.8333. For large uncertainties that have a symmetric effect on the yield it may therefore be desirable to encode them as asymmetric log-normals instead.</li>
+    If <strong>Δx/x</strong> is the relative uncertainty on the multiplicative correction, one should put <strong>1+Δx/x</strong> in the column corresponding to the process and channel. Asymmetric log-normals are instead supported by providing <strong>κ<sub>down</sub>/κ<sub>up</sub></strong> where <strong>κ<sub>down</sub></strong> is the ratio of the the yield to the nominal value for a -1σ deviation of the nuisance and <strong>κ<sub>up</sub></strong> is the ratio of thyield to the nominal value for <span class="arithmatex"><span class="MathJax_Preview">+1\sigma</span><script type="math/tex">+1\sigma</script></span> deviation. Note that for single-value log-normal with value <span class="arithmatex"><span class="MathJax_Preview">\kappa=1+\Delta x/x</span><script type="math/tex">\kappa=1+\Delta x/x</script></span>, the yield of the process it is associated with is multiplied by <span class="arithmatex"><span class="MathJax_Preview">\kappa^{\theta}</span><script type="math/tex">\kappa^{\theta}</script></span>. At <span class="arithmatex"><span class="MathJax_Preview">\theta=0</span><script type="math/tex">\theta=0</script></span> the nominal yield is retained, at <span class="arithmatex"><span class="MathJax_Preview">\theta=1\sigma</span><script type="math/tex">\theta=1\sigma</script></span> the yield is multiplied by <span class="arithmatex"><span class="MathJax_Preview">\kappa</span><script type="math/tex">\kappa</script></span> and at <span class="arithmatex"><span class="MathJax_Preview">\theta=-1\sigma</span><script type="math/tex">\theta=-1\sigma</script></span> the yield is multiplied by <span class="arithmatex"><span class="MathJax_Preview">1/\kappa</span><script type="math/tex">1/\kappa</script></span>. This means that an uncertainty represented as <code>1.2</code> does not multiply the nominal yield by 0.8 for <span class="arithmatex"><span class="MathJax_Preview">\theta=-1\sigma</span><script type="math/tex">\theta=-1\sigma</script></span>; but by 0.8333. For large uncertainties that have a symmetric effect on the yield it may therefore be desirable to encode them as asymmetric log-normals instead.</li>
 <li><strong><code>gmN</code></strong> stands for <a href="http://en.wikipedia.org/wiki/Gamma_distribution">Gamma</a>, and is the recommended choice for the statistical uncertainty on a background coming from the number of events in a control region (or in a MC sample with limited statistics).
     If the control region or MC contains <strong>N</strong> events, and the extrapolation factor from the control region to the signal region is <strong>α</strong> then one shoud put <strong>N</strong> just after the <strong><code>gmN</code></strong> keyword, and then the value of <strong>α</strong> in the proper column. Also, the yield in the <strong><code>rate</code></strong> row should match with <strong>Nα</strong></li>
 <li><strong><code>lnU</code></strong> stands for log-uniform distribution. A value of <strong>1+ε</strong> in the column will imply that the yield of this background is allowed to float freely between <strong>x(1+ε)</strong> and <strong>x/(1+ε)</strong> (in particular, if ε is small, then this is approximately <strong>(x-Δx,x+Δx)</strong> with <strong>ε=Δx/x</strong> )
@@ -289,7 +289,7 @@ bg_others lnN    -     -     -   1.30   30% uncertainty on the rest of the backg
 <ul>
 <li>the first uncertainty affects the signal by 11%, and affects the <strong><code>ggWW</code></strong> process by 11%</li>
 <li>the second uncertainty affects the signal by 16% leaving the backgrounds unaffected</li>
-<li>the third line specifies that the <strong><code>qqWW</code></strong> background comes from a sideband with 4 observed events and an extrapolation factor of 0.16; the resulting uncertainty on the expected yield is <span><span class="MathJax_Preview">1/\sqrt{4+1}</span><script type="math/tex">1/\sqrt{4+1}</script></span> = 45%</li>
+<li>the third line specifies that the <strong><code>qqWW</code></strong> background comes from a sideband with 4 observed events and an extrapolation factor of 0.16; the resulting uncertainty on the expected yield is <span class="arithmatex"><span class="MathJax_Preview">1/\sqrt{4+1}</span><script type="math/tex">1/\sqrt{4+1}</script></span> = 45%</li>
 <li>the fourth uncertainty does not affect the signal, affects the <strong><code>ggWW</code></strong> background by 50%, leaving the other backgrounds unaffected</li>
 <li>the last uncertainty does not affect the signal, affects by 30% the <strong><code>others</code></strong> backgrounds, leaving the rest of the backgrounds unaffected</li>
 </ul>
@@ -336,14 +336,14 @@ bg_others lnN    -     -     -   1.30   30% uncertainty on the rest of the backg
 </ul>
 <p>In addition, user defined keywords can be included to be replaced. Any word in the datacard <strong>$WORD</strong> will be replaced by <strong>VALUE</strong> when including the option <code>--keyword-value WORD=VALUE</code>. The option can be repeated multiple times for multiple keywords.</p>
 <h4 id="template-shape-uncertainties">Template shape uncertainties</h4>
-<p>Shape uncertainties can be taken into account by vertical interpolation of the histograms. The shapes (fraction of events <span><span class="MathJax_Preview">f</span><script type="math/tex">f</script></span> in each bin) are interpolated using a spline for shifts below +/- 1σ and linearly outside of that. Specifically, for nuisance parameter values <span><span class="MathJax_Preview">|\theta|\leq 1</span><script type="math/tex">|\theta|\leq 1</script></span> </p>
-<div>
+<p>Shape uncertainties can be taken into account by vertical interpolation of the histograms. The shapes (fraction of events <span class="arithmatex"><span class="MathJax_Preview">f</span><script type="math/tex">f</script></span> in each bin) are interpolated using a spline for shifts below +/- 1σ and linearly outside of that. Specifically, for nuisance parameter values <span class="arithmatex"><span class="MathJax_Preview">|\theta|\leq 1</span><script type="math/tex">|\theta|\leq 1</script></span> </p>
+<div class="arithmatex">
 <div class="MathJax_Preview"> f(\theta) = \frac{1}{2} \left( (\delta^{+}-\delta^{-})\theta + \frac{1}{8}(\delta^{+}+\delta^{-})(3\theta^6 - 10\theta^4 + 15\theta^2) \right) </div>
 <script type="math/tex; mode=display"> f(\theta) = \frac{1}{2} \left( (\delta^{+}-\delta^{-})\theta + \frac{1}{8}(\delta^{+}+\delta^{-})(3\theta^6 - 10\theta^4 + 15\theta^2) \right) </script>
 </div>
-<p>and for <span><span class="MathJax_Preview">|\theta|&gt; 1</span><script type="math/tex">|\theta|> 1</script></span> (<span><span class="MathJax_Preview">|\theta|&lt;-1</span><script type="math/tex">|\theta|<-1</script></span>), <span><span class="MathJax_Preview">f(\theta)</span><script type="math/tex">f(\theta)</script></span> is a straight line with gradient <span><span class="MathJax_Preview">\delta^{+}</span><script type="math/tex">\delta^{+}</script></span> (<span><span class="MathJax_Preview">\delta^{-}</span><script type="math/tex">\delta^{-}</script></span>), where <span><span class="MathJax_Preview">\delta^{+}=f(\theta=1)-f(\theta=0)</span><script type="math/tex">\delta^{+}=f(\theta=1)-f(\theta=0)</script></span>, and <span><span class="MathJax_Preview">\delta^{-}=f(\theta=-1)-f(\theta=0)</span><script type="math/tex">\delta^{-}=f(\theta=-1)-f(\theta=0)</script></span>, derived using the nominal and up/down histograms. and 
-This interpolation is designed so that the values of <span><span class="MathJax_Preview">f(\theta)</span><script type="math/tex">f(\theta)</script></span> and its derivatives are continuous for all values of <span><span class="MathJax_Preview">\theta</span><script type="math/tex">\theta</script></span>. </p>
-<p>The normalizations are interpolated linearly in log scale just like we do for log-normal uncertainties. If the value in a given bin is negative for some value of <span><span class="MathJax_Preview">\theta</span><script type="math/tex">\theta</script></span>, the value will be truncated at 0.</p>
+<p>and for <span class="arithmatex"><span class="MathJax_Preview">|\theta|&gt; 1</span><script type="math/tex">|\theta|> 1</script></span> (<span class="arithmatex"><span class="MathJax_Preview">|\theta|&lt;-1</span><script type="math/tex">|\theta|<-1</script></span>), <span class="arithmatex"><span class="MathJax_Preview">f(\theta)</span><script type="math/tex">f(\theta)</script></span> is a straight line with gradient <span class="arithmatex"><span class="MathJax_Preview">\delta^{+}</span><script type="math/tex">\delta^{+}</script></span> (<span class="arithmatex"><span class="MathJax_Preview">\delta^{-}</span><script type="math/tex">\delta^{-}</script></span>), where <span class="arithmatex"><span class="MathJax_Preview">\delta^{+}=f(\theta=1)-f(\theta=0)</span><script type="math/tex">\delta^{+}=f(\theta=1)-f(\theta=0)</script></span>, and <span class="arithmatex"><span class="MathJax_Preview">\delta^{-}=f(\theta=-1)-f(\theta=0)</span><script type="math/tex">\delta^{-}=f(\theta=-1)-f(\theta=0)</script></span>, derived using the nominal and up/down histograms. and 
+This interpolation is designed so that the values of <span class="arithmatex"><span class="MathJax_Preview">f(\theta)</span><script type="math/tex">f(\theta)</script></span> and its derivatives are continuous for all values of <span class="arithmatex"><span class="MathJax_Preview">\theta</span><script type="math/tex">\theta</script></span>. </p>
+<p>The normalizations are interpolated linearly in log scale just like we do for log-normal uncertainties. If the value in a given bin is negative for some value of <span class="arithmatex"><span class="MathJax_Preview">\theta</span><script type="math/tex">\theta</script></span>, the value will be truncated at 0.</p>
 <p>For each shape uncertainty and process/channel affected by it, two additional input shapes have to be provided, obtained shifting that parameter up and down by one standard deviation. When building the likelihood, each shape uncertainty is associated to a nuisance parameter taken from a unit gaussian distribution, which is used to interpolate or extrapolate using the specified histograms.</p>
 <p>For each given source of shape uncertainty, in the part of the datacard containing shape uncertainties (last block), there must be a row</p>
 <ul>
@@ -359,7 +359,7 @@ sigma  shape    0.5         -   uncertainty on signal resolution. Assume the his
 #                                so divide the unit gaussian by 2 before doing the interpolation
 </code></pre>
 <p>There are two options for the interpolation algorithm in the "shape" uncertainty. Putting <strong><code>shape</code></strong> will result in a  of the <strong>fraction of events in each bin</strong> - i.e the histograms are first normalised before interpolation. Putting <strong><code>shapeN</code></strong> while instead base the interpolation on the logs of the fraction in each bin. For <em>both</em> <strong><code>shape</code></strong>  and <strong><code>shapeN</code></strong>, the total normalisation is interpolated using an asymmetric log-normal so that the effect of the systematic on both the shape and normalisation are accounted for. The following image shows a comparison of those two algorithms for this datacard.</p>
-<p><img alt="" src="images/compare-shape-algo.png" /></p>
+<p><img alt="" src="../images/compare-shape-algo.png" /></p>
 <p>In this case there are two processes, <em>signal</em> and <em>background</em>, and two uncertainties affecting background (<em>alpha</em>) and signal shape (<em>sigma</em>). Within the root file 2 histograms per systematic have to be provided, they are the shape obtained, for the specific process, shifting up and down the parameter associated to the uncertainty: <code>background_alphaUp</code> and <code>background_alphaDown</code>, <code>signal_sigmaUp</code> and <code>signal_sigmaDown</code>.</p>
 <p>This is the content of the root file <a href="https://github.com/cms-analysis/HiggsAnalysis-CombinedLimit/blob/81x-root606/data/benchmarks/shapes/simple-shapes-TH1.root">simple-shapes-TH1.root </a> associated to the datacard <a href="https://github.com/cms-analysis/HiggsAnalysis-CombinedLimit/blob/81x-root606/data/benchmarks/shapes/simple-shapes-TH1.txt">data/tutorials/shapes/simple-shapes-TH1.txt</a>:</p>
 <pre><code class="language-nohighlight">root [0]
@@ -496,12 +496,12 @@ RooDataSet::data_obs(j)
 <p><strong>2. Use a RooParametricShapeBinPdf</strong></p>
 <p>Another solution (currently implemented for 1-dimensional histograms only) is to use a custom pdf which performs the correct integrals internally as in <a href="https://github.com/cms-analysis/HiggsAnalysis-CombinedLimit/blob/81x-root606/src/RooParametricShapeBinPdf.cc">RooParametricShapeBinPdf</a></p>
 <p>Note that this pdf class now allows parameters that are themselves <strong>RooAbsReal</strong> objects (i.e. functions of other variables). The integrals are handled internally by calling the underlying pdf’s <code>createIntegral()</code> method with named ranges created for each of the bins. This means that if the analytical integrals for the underlying pdf are available, they will be used.</p>
-<p>The constructor for this class requires a <strong>RooAbsReal</strong> (eg any <strong>RooAbsPdf</strong>)along with a list of <strong>RooRealVars</strong> (the parameters, excluding the observable <span><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span>),</p>
+<p>The constructor for this class requires a <strong>RooAbsReal</strong> (eg any <strong>RooAbsPdf</strong>)along with a list of <strong>RooRealVars</strong> (the parameters, excluding the observable <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span>),</p>
 <pre><code class="language-c++">RooParametricShapeBinPdf(const char *name, const char *title,  RooAbsReal&amp; _pdf, RooAbsReal&amp; _x, RooArgList&amp; _pars, const TH1 &amp;_shape )
 </code></pre>
-<p>Below is a comparison of a fit to a binned dataset containing 1000 events with one observable <span><span class="MathJax_Preview">0 \leq x \leq 100</span><script type="math/tex">0 \leq x \leq 100</script></span>. The fit function is a <strong>RooExponential</strong> of the form <span><span class="MathJax_Preview">e^{xp}</span><script type="math/tex">e^{xp}</script></span>.</p>
-<p><img alt="Narrow bins" src="images/narrow.png" />
-<img alt="Wide bins" src="images/wide.png" /></p>
+<p>Below is a comparison of a fit to a binned dataset containing 1000 events with one observable <span class="arithmatex"><span class="MathJax_Preview">0 \leq x \leq 100</span><script type="math/tex">0 \leq x \leq 100</script></span>. The fit function is a <strong>RooExponential</strong> of the form <span class="arithmatex"><span class="MathJax_Preview">e^{xp}</span><script type="math/tex">e^{xp}</script></span>.</p>
+<p><img alt="Narrow bins" src="../images/narrow.png" />
+<img alt="Wide bins" src="../images/wide.png" /></p>
 <p>In the upper plot, the data are binned in 100 evenly spaced bins, while in the lower plot, there are 3 irregular bins. The blue lines show the result of the fit
 when using the <strong>RooExponential</strong> directly while the red shows the result when wrapping the pdf inside a <strong>RooParametricShapeBinPdf</strong>. In the narrow binned case, the two
 agree well while for wide bins, accounting for the integral over the bin yields a better fit.</p>
@@ -696,7 +696,7 @@ MB.doModel()
 <p>The default output is a <code>.html</code> file which allows you to expand to give more details about the affect of the systematic for each channel/process. Add the option <code>--format brief</code> to give a simpler summary report direct to the terminal. An example output for the tutorial card <code>data/tutorials/shapes/simple-shapes-TH1.txt</code> is shown below.</p>
 <pre><code class="language-nohighlight">$ python test/systematicsAnalyzer.py data/tutorials/shapes/simple-shapes-TH1.txt &gt; out.html
 </code></pre>
-<p><img alt="systematics analyzer output" src="images/sysanalyzer.png" /></p>
+<p><img alt="systematics analyzer output" src="../images/sysanalyzer.png" /></p>
 <p>In case you only have a cut-and-count style card, include the option <code>--noshape</code>.</p>
 <p>If you have a datacard which uses several <code>rateParams</code> or a Physics model which includes some complicated product of normalisation terms in each process, you can check the values of the normalisation (and which objects in the workspace comprise them) using the <code>test/printWorkspaceNormalisations.py</code> tool. As an example, below is the first few blocks of output for the tutorial card <code>data/tutorials/counting/realistic-multi-channel.txt</code>. </p>
 <pre><code class="language-nohighlight">$ text2workspace.py data/tutorials/shapes/simple-shapes-parametric.txt -m 30
@@ -784,7 +784,7 @@ Dumping ProcessNormalization n_exp_bine_mu_proc_ZTT @ 0x6bc8910
       </footer>
     
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="../js/bootstrap-3.0.3.min.js"></script>
+    <script src="../../js/bootstrap-3.0.3.min.js"></script>
 
     
     <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/highlight.min.js"></script>
@@ -792,11 +792,11 @@ Dumping ProcessNormalization n_exp_bine_mu_proc_ZTT @ 0x6bc8910
     <script>hljs.initHighlightingOnLoad();</script>
     
 
-    <script>var base_url = ".."</script>
+    <script>var base_url = "../.."</script>
     
-    <script src="../js/base.js"></script>
+    <script src="../../js/base.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-    <script src="../search/main.js"></script>
+    <script src="../../search/main.js"></script>
 
     <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
