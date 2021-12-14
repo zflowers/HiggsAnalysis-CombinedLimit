@@ -36,7 +36,7 @@ parser.add_option("-g", "--histogram", dest="plotfile", default=None, type="stri
 parser.add_option("", "--pullDef",  dest="pullDef", default="", type="string", help="Choose the definition of the pull, see python/calculate_pulls.py for options")
 parser.add_option("", "--skipFitS", dest="skipFitS", default=False, action='store_true', help="skip the S+B fit, instead the B-only fit will be repeated")
 parser.add_option("", "--skipFitB", dest="skipFitB", default=False, action='store_true', help="skip the B-only fit, instead the S+B fit will be repeated")
-parser.add_option("", "--sortBy", dest="sortBy", default="correlation", type='string', help="choose 'correlation' or 'impact' to sort rows by correlation with or impact on --poi (largest to smallest absolute)")
+parser.add_option("", "--sortBy", dest="sortBy", default="neither", type='string', help="choose 'correlation' or 'impact' to sort rows by correlation with or impact on --poi (largest to smallest absolute)")
 
 (options, args) = parser.parse_args()
 if len(args) == 0:
@@ -51,7 +51,7 @@ if options.pullDef and options.absolute_values :
 
 if options.pullDef : options.show_all_parameters=True
 
-if options.sortBy not in ['correlation','impact']: exit("choose one of [ %s ] for --sortBy"%(",".join()['correlation','impact']))
+if options.sortBy not in ['correlation','impact','neither']: exit("choose one of [ %s ] for --sortBy"%(",".join()['correlation','impact','neither']))
 
 setUpString = "diffNuisances run on %s, at %s with the following options ... "%(args[0],datetime.datetime.utcnow())+str(options)
 
@@ -283,9 +283,9 @@ elif options.format == 'latex':
         fmtstring = "%-40s &  %15s & %15s & %6s & %6s \\\\"
         print "\\begin{tabular}{|l|r|r|r|r|} \\hline ";
         #what = r"$(x_\text{out} - x_\text{in})/\sigma_{\text{in}}$, $\sigma_{\text{out}}/\sigma_{\text{in}}$"
-        what = r"\Delta x/\sigma_{\text{in}}$, $\sigma_{\text{out}}/\sigma_{\text{in}}$"
+        what = r"$\Delta x/\sigma_{\text{in}}$, $\sigma_{\text{out}}/\sigma_{\text{in}}$"
         print  fmtstring % ('',     '$b$-only fit', '$s+b$ fit', '', '')
-        print (fmtstring % ('name', what, what, r'$\rho(\theta, \mu)$', r'I(\theta, \mu)')), " \\hline"
+        print (fmtstring % ('name', what, what, r'$\rho(\theta, \mu)$', r'$I(\theta, \mu)$')), " \\hline"
 elif options.format == 'twiki':
     pmsub  = (r"(\S+) \+/- (\S+)", r"\1 &plusmn; \2")
     sigsub = ("sig", r"&sigma;")
@@ -324,7 +324,7 @@ elif options.format == 'html':
         print "<tr><th>nuisance</th><th>pre fit</th><th>background fit </th><th>signal fit</th><th>correlation</th></tr>"
         fmtstring = "<tr><td><tt>%-40s</tt> </td><td> %-15s </td><td> %-30s </td><td> %-30s </td><td> %-15s </td><td> %-15s </td></tr>"
     else:
-        what = "&Delta;x/&sigma;<sub>in</sub>, &sigma;<sub>out</sub>/&sigma;<sub>in</sub>";
+        what = "&$Delta;x/&sigma;<sub>in</sub>, &sigma;<sub>out</sub>/&sigma;<sub>in</sub>";
         print "<tr><th>nuisance</th><th>background fit<br/>%s </th><th>signal fit<br/>%s</th><th>&rho;(&mu;, &theta;)<th>I(&mu;, &theta;)</th></tr>" % (what,what)
         fmtstring = "<tr><td><tt>%-40s</tt> </td><td> %-15s </td><td> %-15s </td><td> %-15s </td><td> %-15s </td></tr>"
 
